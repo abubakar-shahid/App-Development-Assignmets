@@ -1,6 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!-- res/values/strings.xml -->
+<resources>
+    <!-- App name -->
+    <string name="app_name">My Application</string>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Splash Screen -->
+    <string name="splash_screen_text">Welcome to My App</string>
+
+    <!-- Sender Information Form -->
+    <string name="sender_details_header">Sender Details</string>
+    <string name="label_email">Email</string>
+    <string name="label_full_name">Full Name</string>
+    <string name="label_contact_info">Contact Information</string>
+    <string name="label_country">Country</string>
+    <string name="label_address">Address</string>
+    <string name="button_next">Next</string>
+
+    <!-- Receiver Information Form -->
+    <string name="receiver_details_header">Receiver Details</string>
+
+    <!-- Review Information Screen -->
+    <string name="review_information_header">Review Information</string>
+    <string name="transaction_arrow_description">Transaction Flow Arrow</string>
+    <string name="fab_description">Add New Sender Information</string>
+</resources>

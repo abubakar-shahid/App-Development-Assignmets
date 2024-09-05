@@ -1,6 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!-- res/values/colors.xml -->
+<resources>
+    <!-- Define your app's primary colors -->
+    <color name="background_color">#FFFEFE</color> <!-- Light gray background color for splash screen and other forms -->
+    <color name="primary_color">#D33333</color> <!-- Red color used for buttons, headers, etc. -->
+    <color name="white">#FFFFFF</color> <!-- White color for text and other elements -->
+    <color name="black">#000000</color> <!-- Black color for text -->
+</resources>
