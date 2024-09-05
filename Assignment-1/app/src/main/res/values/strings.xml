@@ -8,11 +8,11 @@
 
     <!-- Sender Information Form -->
     <string name="sender_details_header">Sender Details</string>
-    <string name="label_email">Email</string>
-    <string name="label_full_name">Full Name</string>
-    <string name="label_contact_info">Contact Information</string>
-    <string name="label_country">Country</string>
-    <string name="label_address">Address</string>
+    <string name="email">Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="contact_info">Contact Information</string>
+    <string name="country">Country</string>
+    <string name="address">Address</string>
     <string name="button_next">Next</string>
 
     <!-- Receiver Information Form -->
