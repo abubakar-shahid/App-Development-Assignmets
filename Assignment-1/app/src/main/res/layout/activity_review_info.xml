@@ -1,6 +1,136 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rounded_background"
+        android:backgroundTint="@color/primary_color"
+        android:padding="@dimen/padding_medium"
+        android:text="@string/review_information_header"
+        android:textColor="@color/background_color"
+        android:textSize="@dimen/text_size_medium"/>
+
+    <!-- Table Layout for displaying information -->
+    <TableLayout
+        android:id="@+id/info_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_text"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:stretchColumns="1">
+
+        <!-- Table Header Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/full_name"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_info"
+                android:textStyle="bold"
+                android:padding="@dimen/padding_small" />
+        </TableRow>
+
+        <!-- Data Rows -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakeeza"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakistan"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00000"
+                android:padding="@dimen/padding_small" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="67dp"
+                android:layout_height="@dimen/text_size_large"
+                android:contentDescription="@string/transaction_arrow_description"
+                android:padding="@dimen/padding_small"
+
+                android:src="@drawable/arrow" />
+        </TableRow>
+
+        <!-- Another Data Row -->
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rana Waqas"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pakistan"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ABC"
+                android:padding="@dimen/padding_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00000"
+                android:padding="@dimen/padding_small" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btn_custom"
+        android:layout_width="@dimen/text_size_large"
+        android:layout_height="@dimen/text_size_large"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/primary_color"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

@@ -10,7 +10,7 @@
 
     <!-- Text sizes -->
     <dimen name="text_size_small">12sp</dimen>
-    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_medium">40sp</dimen>
     <dimen name="text_size_large">60sp</dimen>
 
     <!-- Button dimensions -->
