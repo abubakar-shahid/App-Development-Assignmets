@@ -18,7 +18,7 @@
         android:textSize="@dimen/text_size_large" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/receiver_email"
         android:layout_width="300dp"
         android:layout_height="55dp"
         android:layout_below="@id/header_text"
@@ -29,10 +29,10 @@
         android:hint="@string/email" />
 
     <EditText
-        android:id="@+id/full_name"
+        android:id="@+id/receiver_name"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_below="@id/email"
+        android:layout_below="@id/receiver_email"
         android:layout_marginTop="@dimen/margin_small"
         android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
@@ -40,10 +40,10 @@
         android:hint="@string/full_name" />
 
     <EditText
-        android:id="@+id/contact_information"
+        android:id="@+id/receiver_contact"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_below="@id/full_name"
+        android:layout_below="@id/receiver_name"
         android:layout_marginTop="@dimen/margin_small"
         android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
@@ -51,10 +51,10 @@
         android:hint="@string/contact_info" />
 
     <EditText
-        android:id="@+id/country"
+        android:id="@+id/receiver_country"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_below="@id/contact_information"
+        android:layout_below="@id/receiver_contact"
         android:layout_marginTop="@dimen/margin_small"
         android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
@@ -62,10 +62,10 @@
         android:hint="@string/country" />
 
     <EditText
-        android:id="@+id/address"
+        android:id="@+id/receiver_address"
         android:layout_width="300dp"
         android:layout_height="55dp"
-        android:layout_below="@id/country"
+        android:layout_below="@id/receiver_country"
         android:layout_marginTop="@dimen/margin_small"
         android:backgroundTint="@color/white"
         android:layout_centerHorizontal="true"
