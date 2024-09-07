@@ -91,7 +91,6 @@
                 android:layout_height="@dimen/text_size_large"
                 android:contentDescription="@string/transaction_arrow_description"
                 android:padding="@dimen/padding_small"
-
                 android:src="@drawable/arrow" />
         </TableRow>
 
@@ -125,12 +124,13 @@
 
     <Button
         android:id="@+id/btn_custom"
-        android:layout_width="@dimen/text_size_large"
-        android:layout_height="@dimen/text_size_large"
+        android:layout_width="67dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_margin="16dp"
-        android:background="@drawable/circle"
+        android:layout_marginTop="@dimen/margin_large"
         android:backgroundTint="@color/primary_color"
-        android:textColor="@android:color/white" />
+        android:text="@string/fab_plus"
+        android:textSize="@dimen/text_size_medium" />
 </RelativeLayout>
