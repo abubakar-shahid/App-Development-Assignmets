@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ReviewInfoActivity extends AppCompatActivity {
@@ -35,9 +36,36 @@ public class ReviewInfoActivity extends AppCompatActivity {
 
         // Populate TableLayout with sender and receiver information
         addTableRow(senderFullName, senderCountry, senderAddress, senderContactInfo);
-//        addArrowRow();
+        addArrowRow();
         addTableRow(receiverFullName, receiverCountry, receiverAddress, receiverContact);
     }
+
+//    private void addTableRow(String fullName, String country, String address, String contactInfo) {
+//        // Create a new TableRow
+//        TableRow tableRow = new TableRow(this);
+//
+//        // Create TextViews for each column
+//        TextView fullNameTextView = new TextView(this);
+//        fullNameTextView.setText(fullName);
+//
+//        TextView countryTextView = new TextView(this);
+//        countryTextView.setText(country);
+//
+//        TextView addressTextView = new TextView(this);
+//        addressTextView.setText(address);
+//
+//        TextView contactInfoTextView = new TextView(this);
+//        contactInfoTextView.setText(contactInfo);
+//
+//        // Add TextViews to the TableRow
+//        tableRow.addView(fullNameTextView);
+//        tableRow.addView(countryTextView);
+//        tableRow.addView(addressTextView);
+//        tableRow.addView(contactInfoTextView);
+//
+//        // Add TableRow to the TableLayout
+//        infoTable.addView(tableRow);
+//    }
 
     private void addTableRow(String fullName, String country, String address, String contactInfo) {
         // Create a new TableRow
@@ -46,15 +74,31 @@ public class ReviewInfoActivity extends AppCompatActivity {
         // Create TextViews for each column
         TextView fullNameTextView = new TextView(this);
         fullNameTextView.setText(fullName);
+        fullNameTextView.setPadding(getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small));
 
         TextView countryTextView = new TextView(this);
         countryTextView.setText(country);
+        countryTextView.setPadding(getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small));
 
         TextView addressTextView = new TextView(this);
         addressTextView.setText(address);
+        addressTextView.setPadding(getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small));
 
         TextView contactInfoTextView = new TextView(this);
         contactInfoTextView.setText(contactInfo);
+        contactInfoTextView.setPadding(getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small),
+                getResources().getDimensionPixelSize(R.dimen.padding_small));
 
         // Add TextViews to the TableRow
         tableRow.addView(fullNameTextView);
@@ -65,6 +109,7 @@ public class ReviewInfoActivity extends AppCompatActivity {
         // Add TableRow to the TableLayout
         infoTable.addView(tableRow);
     }
+
 
 //    private void addArrowRow() {
 //        // Create a new TableRow
@@ -81,4 +126,32 @@ public class ReviewInfoActivity extends AppCompatActivity {
 //        // Add TableRow to the TableLayout
 //        infoTable.addView(tableRow);
 //    }
+
+    private void addArrowRow() {
+        // Create a new TableRow
+        TableRow tableRow = new TableRow(this);
+
+        // Create ImageView for arrow
+        ImageView arrowImageView = new ImageView(this);
+        arrowImageView.setImageResource(R.drawable.arrow); // Replace with your arrow drawable
+        arrowImageView.setContentDescription(getString(R.string.transaction_arrow_description));
+
+        // Set padding
+        int padding = getResources().getDimensionPixelSize(R.dimen.padding_small);
+        arrowImageView.setPadding(padding, padding, padding, padding);
+
+        // Set layout parameters for size
+        TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(
+                getResources().getDimensionPixelSize(R.dimen.text_size_large),
+                getResources().getDimensionPixelSize(R.dimen.text_size_large)
+        );
+        arrowImageView.setLayoutParams(layoutParams);
+
+        // Add ImageView to the TableRow
+        tableRow.addView(arrowImageView);
+
+        // Add TableRow to the TableLayout
+        infoTable.addView(tableRow);
+    }
+
 }

@@ -56,69 +56,6 @@
                 android:textStyle="bold"
                 android:padding="@dimen/padding_small" />
         </TableRow>
-
-        <!-- Data Rows -->
-        <!-- <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-        </TableRow>
-
-        <TableRow>
-
-            <ImageView
-                android:layout_width="67dp"
-                android:layout_height="@dimen/text_size_large"
-                android:contentDescription="@string/transaction_arrow_description"
-                android:padding="@dimen/padding_small"
-                android:src="@drawable/arrow" />
-        </TableRow>
-
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:padding="@dimen/padding_small" />
-        </TableRow> -->
     </TableLayout>
 
     <Button
