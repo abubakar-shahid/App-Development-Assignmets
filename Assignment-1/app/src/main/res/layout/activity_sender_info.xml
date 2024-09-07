@@ -3,7 +3,6 @@
     android:layout_height="match_parent"
     android:background="@color/background_color">
 
-    <!-- Header -->
     <TextView
         android:id="@+id/header_text"
         android:layout_width="match_parent"
@@ -72,7 +71,6 @@
         android:background="@drawable/rounded_background"
         android:hint="@string/address" />
 
-    <!-- Centered Next Button -->
     <Button
         android:id="@+id/btn_next_sender"
         android:layout_width="wrap_content"

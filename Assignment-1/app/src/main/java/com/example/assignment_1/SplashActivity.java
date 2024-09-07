@@ -1,5 +1,3 @@
-// SplashActivity.java
-
 package com.example.assignment_1;
 
 import android.content.Intent;
@@ -13,11 +11,10 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        // Display splash screen for 3 seconds
         new Handler().postDelayed(() -> {
             startActivity(new Intent(SplashActivity.this, SenderInfoActivity.class));
             finish();
-        }, 3000);
+        }, 2000);
     }
 }
 

@@ -3,7 +3,6 @@
     android:layout_height="match_parent"
     android:background="@color/background_color">
 
-    <!-- Header -->
     <TextView
         android:id="@+id/header_text"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         android:textColor="@color/white"
         android:textSize="@dimen/text_size_medium"/>
 
-    <!-- Table Layout for displaying information -->
     <TableLayout
         android:id="@+id/info_table"
         android:layout_width="match_parent"
@@ -26,7 +24,6 @@
         android:padding="@dimen/padding_small"
         android:stretchColumns="1">
 
-        <!-- Table Header Row -->
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
