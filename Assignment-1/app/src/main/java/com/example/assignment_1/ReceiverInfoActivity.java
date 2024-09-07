@@ -1,5 +1,3 @@
-// ReceiverInfoActivity.java
-
 package com.example.assignment_1;
 
 import android.content.Intent;
@@ -11,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceiverInfoActivity extends AppCompatActivity {
 
-    // Declare EditText fields for receiver information
     private EditText receiverNameEditText, receiverEmailEditText, receiverContactEditText, receiverAddressEditText, receiverCountryEditText;
 
     @Override
@@ -19,14 +16,12 @@ public class ReceiverInfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_receiver_info);
 
-        // Initialize EditText fields for receiver information
         receiverNameEditText = findViewById(R.id.receiver_name);
         receiverEmailEditText = findViewById(R.id.receiver_email);
         receiverContactEditText = findViewById(R.id.receiver_contact);
         receiverAddressEditText = findViewById(R.id.receiver_address);
         receiverCountryEditText = findViewById(R.id.receiver_country);
 
-        // Retrieve sender information passed from SenderInfoActivity
         Intent senderIntent = getIntent();
         String senderEmail = senderIntent.getStringExtra("sender_email");
         String senderFullName = senderIntent.getStringExtra("sender_name");
@@ -38,17 +33,14 @@ public class ReceiverInfoActivity extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Retrieve receiver input data
                 String receiverName = receiverNameEditText.getText().toString();
                 String receiverEmail = receiverEmailEditText.getText().toString();
                 String receiverContact = receiverContactEditText.getText().toString();
                 String receiverAddress = receiverAddressEditText.getText().toString();
                 String receiverCountry = receiverCountryEditText.getText().toString();
 
-                // Navigate to the Review Information Screen
                 Intent intent = new Intent(ReceiverInfoActivity.this, ReviewInfoActivity.class);
 
-                // Pass sender and receiver data to the next activity
                 intent.putExtra("sender_email", senderEmail);
                 intent.putExtra("sender_name", senderFullName);
                 intent.putExtra("sender_country", senderCountry);
