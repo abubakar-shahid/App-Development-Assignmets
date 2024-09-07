@@ -111,10 +111,7 @@ public class ReviewInfoActivity extends AppCompatActivity {
                 getResources().getDimensionPixelSize(R.dimen.text_size_large)
         );
         arrowImageView.setLayoutParams(layoutParams);
-
         tableRow.addView(arrowImageView);
-
-        // Append the Arrow Row to the TableLayout without clearing it
         infoTable.addView(tableRow);
     }
 }

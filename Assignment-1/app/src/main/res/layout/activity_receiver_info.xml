@@ -14,7 +14,7 @@
         android:backgroundTint="@color/primary_color"
         android:padding="@dimen/padding_medium"
         android:text="@string/sender_details_header"
-        android:textColor="@color/background_color"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_large" />
 
     <EditText

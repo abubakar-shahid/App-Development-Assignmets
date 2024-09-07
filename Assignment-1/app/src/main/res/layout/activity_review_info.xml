@@ -13,7 +13,7 @@
         android:backgroundTint="@color/primary_color"
         android:padding="@dimen/padding_medium"
         android:text="@string/review_information_header"
-        android:textColor="@color/background_color"
+        android:textColor="@color/white"
         android:textSize="@dimen/text_size_medium"/>
 
     <!-- Table Layout for displaying information -->
