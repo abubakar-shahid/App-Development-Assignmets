@@ -43,9 +43,9 @@ public class SenderInfoActivity extends AppCompatActivity {
                 // Pass data to the next activity
                 intent.putExtra("sender_email", email);
                 intent.putExtra("sender_name", fullName);
-                intent.putExtra("sender_contact_info", contactInfo);
                 intent.putExtra("sender_country", country);
                 intent.putExtra("sender_address", address);
+                intent.putExtra("sender_contact", contactInfo);
 
                 startActivity(intent);
             }

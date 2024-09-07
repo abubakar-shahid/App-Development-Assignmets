@@ -4,58 +4,81 @@ package com.example.assignment_1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class ReviewInfoActivity extends AppCompatActivity {
 
-    // Declare TextViews for displaying the information
-    private TextView senderEmailTextView, senderFullNameTextView, senderContactTextView, senderCountryTextView, senderAddressTextView;
-    private TextView receiverNameTextView, receiverEmailTextView, receiverContactTextView, receiverAddressTextView, receiverCountryTextView;
+    private TableLayout infoTable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_info);
 
-        // Initialize TextViews for sender and receiver information
-        senderEmailTextView = findViewById(R.id.sender_email);
-        senderFullNameTextView = findViewById(R.id.sender_name);
-        senderContactTextView = findViewById(R.id.sender_contact);
-        senderCountryTextView = findViewById(R.id.sender_country);
-        senderAddressTextView = findViewById(R.id.sender_address);
-
-        receiverNameTextView = findViewById(R.id.receiver_name);
-        receiverEmailTextView = findViewById(R.id.receiver_email);
-        receiverContactTextView = findViewById(R.id.receiver_contact);
-        receiverAddressTextView = findViewById(R.id.receiver_address);
-        receiverCountryTextView = findViewById(R.id.receiver_country);
+        // Initialize TableLayout
+        infoTable = findViewById(R.id.info_table);
 
         // Retrieve sender and receiver information passed from ReceiverInfoActivity
         Intent intent = getIntent();
-        String senderEmail = intent.getStringExtra("sender_email");
         String senderFullName = intent.getStringExtra("sender_name");
-        String senderContactInfo = intent.getStringExtra("sender_contact_info");
         String senderCountry = intent.getStringExtra("sender_country");
         String senderAddress = intent.getStringExtra("sender_address");
+        String senderContactInfo = intent.getStringExtra("sender_contact");
 
-        String receiverName = intent.getStringExtra("receiver_name");
-        String receiverEmail = intent.getStringExtra("receiver_email");
-        String receiverContact = intent.getStringExtra("receiver_contact");
-        String receiverAddress = intent.getStringExtra("receiver_address");
+        String receiverFullName = intent.getStringExtra("receiver_name");
         String receiverCountry = intent.getStringExtra("receiver_country");
+        String receiverAddress = intent.getStringExtra("receiver_address");
+        String receiverContact = intent.getStringExtra("receiver_contact");
 
-        // Populate TextViews with retrieved information
-        senderEmailTextView.setText(senderEmail);
-        senderFullNameTextView.setText(senderFullName);
-        senderContactTextView.setText(senderContactInfo);
-        senderCountryTextView.setText(senderCountry);
-        senderAddressTextView.setText(senderAddress);
-
-        receiverNameTextView.setText(receiverName);
-        receiverEmailTextView.setText(receiverEmail);
-        receiverContactTextView.setText(receiverContact);
-        receiverAddressTextView.setText(receiverAddress);
-        receiverCountryTextView.setText(receiverCountry);
+        // Populate TableLayout with sender and receiver information
+        addTableRow(senderFullName, senderCountry, senderAddress, senderContactInfo);
+//        addArrowRow();
+        addTableRow(receiverFullName, receiverCountry, receiverAddress, receiverContact);
     }
+
+    private void addTableRow(String fullName, String country, String address, String contactInfo) {
+        // Create a new TableRow
+        TableRow tableRow = new TableRow(this);
+
+        // Create TextViews for each column
+        TextView fullNameTextView = new TextView(this);
+        fullNameTextView.setText(fullName);
+
+        TextView countryTextView = new TextView(this);
+        countryTextView.setText(country);
+
+        TextView addressTextView = new TextView(this);
+        addressTextView.setText(address);
+
+        TextView contactInfoTextView = new TextView(this);
+        contactInfoTextView.setText(contactInfo);
+
+        // Add TextViews to the TableRow
+        tableRow.addView(fullNameTextView);
+        tableRow.addView(countryTextView);
+        tableRow.addView(addressTextView);
+        tableRow.addView(contactInfoTextView);
+
+        // Add TableRow to the TableLayout
+        infoTable.addView(tableRow);
+    }
+
+//    private void addArrowRow() {
+//        // Create a new TableRow
+//        TableRow tableRow = new TableRow(this);
+//
+//        // Create ImageView for arrow
+//        ImageView arrowImageView = new ImageView(this);
+//        arrowImageView.setImageResource(R.drawable.arrow); // Replace with your arrow drawable
+//        arrowImageView.setContentDescription(getString(R.string.transaction_arrow_description));
+//
+//        // Add ImageView to the TableRow
+//        tableRow.addView(arrowImageView);
+//
+//        // Add TableRow to the TableLayout
+//        infoTable.addView(tableRow);
+//    }
 }

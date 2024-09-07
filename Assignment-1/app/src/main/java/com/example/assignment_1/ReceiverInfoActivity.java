@@ -30,9 +30,9 @@ public class ReceiverInfoActivity extends AppCompatActivity {
         Intent senderIntent = getIntent();
         String senderEmail = senderIntent.getStringExtra("sender_email");
         String senderFullName = senderIntent.getStringExtra("sender_name");
-        String senderContactInfo = senderIntent.getStringExtra("sender_contact_info");
         String senderCountry = senderIntent.getStringExtra("sender_country");
         String senderAddress = senderIntent.getStringExtra("sender_address");
+        String senderContactInfo = senderIntent.getStringExtra("sender_contact");
 
         Button nextButton = findViewById(R.id.btn_next_receiver);
         nextButton.setOnClickListener(new View.OnClickListener() {
@@ -51,14 +51,14 @@ public class ReceiverInfoActivity extends AppCompatActivity {
                 // Pass sender and receiver data to the next activity
                 intent.putExtra("sender_email", senderEmail);
                 intent.putExtra("sender_name", senderFullName);
-                intent.putExtra("sender_contact_info", senderContactInfo);
                 intent.putExtra("sender_country", senderCountry);
                 intent.putExtra("sender_address", senderAddress);
-                intent.putExtra("receiver_name", receiverName);
+                intent.putExtra("sender_contact", senderContactInfo);
                 intent.putExtra("receiver_email", receiverEmail);
-                intent.putExtra("receiver_contact", receiverContact);
-                intent.putExtra("receiver_address", receiverAddress);
+                intent.putExtra("receiver_name", receiverName);
                 intent.putExtra("receiver_country", receiverCountry);
+                intent.putExtra("receiver_address", receiverAddress);
+                intent.putExtra("receiver_contact", receiverContact);
 
                 startActivity(intent);
             }

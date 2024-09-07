@@ -58,29 +58,29 @@
         </TableRow>
 
         <!-- Data Rows -->
-        <TableRow>
+        <!-- <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pakeeza"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pakistan"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABC"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00000"
+
                 android:padding="@dimen/padding_small" />
         </TableRow>
 
@@ -94,32 +94,31 @@
                 android:src="@drawable/arrow" />
         </TableRow>
 
-        <!-- Another Data Row -->
         <TableRow>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rana Waqas"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pakistan"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ABC"
+
                 android:padding="@dimen/padding_small" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00000"
+
                 android:padding="@dimen/padding_small" />
-        </TableRow>
+        </TableRow> -->
     </TableLayout>
 
     <Button
