@@ -4,6 +4,8 @@ package com.example.assignment_1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -21,6 +23,17 @@ public class ReviewInfoActivity extends AppCompatActivity {
 
         // Initialize TableLayout
         infoTable = findViewById(R.id.info_table);
+
+        // Initialize Button and set click listener
+        Button btnAdd = findViewById(R.id.btn_add);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate back to the Sender Information Form
+                Intent intent = new Intent(ReviewInfoActivity.this, SenderInfoActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Retrieve sender and receiver information passed from ReceiverInfoActivity
         Intent intent = getIntent();
@@ -40,36 +53,12 @@ public class ReviewInfoActivity extends AppCompatActivity {
         addTableRow(receiverFullName, receiverCountry, receiverAddress, receiverContact);
     }
 
-//    private void addTableRow(String fullName, String country, String address, String contactInfo) {
-//        // Create a new TableRow
-//        TableRow tableRow = new TableRow(this);
-//
-//        // Create TextViews for each column
-//        TextView fullNameTextView = new TextView(this);
-//        fullNameTextView.setText(fullName);
-//
-//        TextView countryTextView = new TextView(this);
-//        countryTextView.setText(country);
-//
-//        TextView addressTextView = new TextView(this);
-//        addressTextView.setText(address);
-//
-//        TextView contactInfoTextView = new TextView(this);
-//        contactInfoTextView.setText(contactInfo);
-//
-//        // Add TextViews to the TableRow
-//        tableRow.addView(fullNameTextView);
-//        tableRow.addView(countryTextView);
-//        tableRow.addView(addressTextView);
-//        tableRow.addView(contactInfoTextView);
-//
-//        // Add TableRow to the TableLayout
-//        infoTable.addView(tableRow);
-//    }
-
     private void addTableRow(String fullName, String country, String address, String contactInfo) {
         // Create a new TableRow
         TableRow tableRow = new TableRow(this);
+
+        // Set an ID for the TableRow (optional, useful if you want to find and manage specific rows)
+        tableRow.setId(View.generateViewId());
 
         // Create TextViews for each column
         TextView fullNameTextView = new TextView(this);
@@ -106,52 +95,26 @@ public class ReviewInfoActivity extends AppCompatActivity {
         tableRow.addView(addressTextView);
         tableRow.addView(contactInfoTextView);
 
-        // Add TableRow to the TableLayout
+        // Append the TableRow to the TableLayout without clearing it
         infoTable.addView(tableRow);
     }
 
-
-//    private void addArrowRow() {
-//        // Create a new TableRow
-//        TableRow tableRow = new TableRow(this);
-//
-//        // Create ImageView for arrow
-//        ImageView arrowImageView = new ImageView(this);
-//        arrowImageView.setImageResource(R.drawable.arrow); // Replace with your arrow drawable
-//        arrowImageView.setContentDescription(getString(R.string.transaction_arrow_description));
-//
-//        // Add ImageView to the TableRow
-//        tableRow.addView(arrowImageView);
-//
-//        // Add TableRow to the TableLayout
-//        infoTable.addView(tableRow);
-//    }
-
     private void addArrowRow() {
-        // Create a new TableRow
         TableRow tableRow = new TableRow(this);
 
-        // Create ImageView for arrow
         ImageView arrowImageView = new ImageView(this);
-        arrowImageView.setImageResource(R.drawable.arrow); // Replace with your arrow drawable
+        arrowImageView.setImageResource(R.drawable.arrow);
         arrowImageView.setContentDescription(getString(R.string.transaction_arrow_description));
 
-        // Set padding
-        int padding = getResources().getDimensionPixelSize(R.dimen.padding_small);
-        arrowImageView.setPadding(padding, padding, padding, padding);
-
-        // Set layout parameters for size
         TableRow.LayoutParams layoutParams = new TableRow.LayoutParams(
                 getResources().getDimensionPixelSize(R.dimen.text_size_large),
                 getResources().getDimensionPixelSize(R.dimen.text_size_large)
         );
         arrowImageView.setLayoutParams(layoutParams);
 
-        // Add ImageView to the TableRow
         tableRow.addView(arrowImageView);
 
-        // Add TableRow to the TableLayout
+        // Append the Arrow Row to the TableLayout without clearing it
         infoTable.addView(tableRow);
     }
-
 }
