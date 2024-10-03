@@ -1,8 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="16dp" />
-    <padding
-        android:left="18dp"
-        android:top="18dp"
-        android:right="18dp"
-        android:bottom="18dp" />
-</shape>

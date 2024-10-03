@@ -1,8 +1,0 @@
-<!-- res/values/colors.xml -->
-<resources>
-    <!-- Define your app's primary colors -->
-    <color name="background_color">#CBCBCB</color> <!-- Light gray background color for splash screen and other forms -->
-    <color name="primary_color">#D33333</color> <!-- Red color used for buttons, headers, etc. -->
-    <color name="white">#FFFFFF</color> <!-- White color for text and other elements -->
-    <color name="black">#000000</color> <!-- Black color for text -->
-</resources>
