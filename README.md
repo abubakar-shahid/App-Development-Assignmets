@@ -17,7 +17,7 @@ A mobile app designed with four distinct screens: Splash Screen, Sender Informat
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/Interactive-Data-Entry-Mobile-App.git
+    git clone https://github.com/abubakar-shahid/Interactive-Data-Entry-Mobile-App.git
     ```
 
 2. Open the project in Android Studio.
